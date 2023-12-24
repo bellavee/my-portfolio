@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Navigation from './components/Navigation.svelte';
+	import Project from './pages/Project.svelte';
+	import Presentation from './pages/Presentation.svelte';
+	import Footer from './pages/Footer.svelte';
+</script>
+
+<style>
+    /* Local styles */
+</style>
+
+<Navigation/>
+
+<div class="bg-zinc-900 pt-16">
+
+	<Presentation/>
+	<Project/>
+	<Footer/>
+
+</div>
