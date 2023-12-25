@@ -1,12 +1,25 @@
 <script>
 	export let label = 'Button';
 	export let active = false;
-	export let onClick = () => {}; // Accepts a callback function for click events
+	export let onClick = () => {};
+	export let iconSrc = ''; // Icon source URL
 </script>
 
+<style>
+    .icon {
+				width: 24px;
+				height: auto;
+        transition: filter 0.3s ease-in-out;
+    }
+
+    .icon-inactive {
+        filter: grayscale(100%); /* Gray filter for inactive state */
+    }
+</style>
+
 <button
-	class="transition duration-300 ease-in-out text-white font-normal py-3 px-6 rounded-xl
-         {active ? 'bg-zinc-800' : 'bg-zinc-900'}"
-	on:click={onClick}>
+	class="flex items-center transition duration-300 ease-in-out text-white font-normal py-4 px-6 rounded-xl text-xl
+         {active ? 'bg-navy-800 border border-navy-700' : 'bg-navy-900'} hover:bg-navy-700" on:click={onClick}>
+	<img src={iconSrc} alt="btn-icon" class="mr-3 icon {active ? '' : 'icon-inactive'}" />
 	{label}
 </button>

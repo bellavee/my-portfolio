@@ -1,26 +1,46 @@
 <script>
 	import Button from '../components/Button.svelte';
-	import Game from './project/Game.svelte';
-	import Website from './project/Website.svelte';
+	import Games from './project/Games.svelte';
+	import Websites from './project/Websites.svelte';
+	import Scripts from './project/Scripts.svelte';
 
-	let activePage = 'Website';
+	import game from '$lib/assets/icon/game.png'
+	import web from '$lib/assets/icon/web.png'
+	import toolkit from '$lib/assets/icon/toolkit.png'
+
+	let activePage = 'Games';
 	function setActivePage(page) {
 		activePage = page;
 	}
+
 </script>
 
-<div class="mx-auto max-w-7xl py-20">
-
+<div class="mx-4 sm:mx-auto max-w-screen-xl 2xl:max-w-screen-2xl py-20">
 	<h1 class="mb-8 text-white font-semibold text-4xl">Projects</h1>
 
-	<div class="flex items-center gap-4 justify-start mb-4">
-		<Button label="Website" active={activePage === 'Website'} onClick={() => setActivePage('Website')} />
-		<Button label="Game" active={activePage === 'Game'} onClick={() => setActivePage('Game')} />
+	<div class="flex flex-wrap items-center gap-4 justify-start mb-4">
+		<Button
+			label="Games"
+			iconSrc={game}
+			active={activePage === 'Games'}
+			onClick={() => setActivePage('Games')} />
+		<Button
+			label="Websites"
+			iconSrc={web}
+			active={activePage === 'Websites'}
+			onClick={() => setActivePage('Websites')} />
+		<Button
+			label="Scripts"
+			iconSrc={toolkit}
+			active={activePage === 'Scripts'}
+			onClick={() => setActivePage('Scripts')} />
 	</div>
 
-	{#if activePage === 'Website'}
-		<Website/>
-	{:else if activePage === 'Game'}
-		<Game/>
+	{#if activePage === 'Websites'}
+		<Websites/>
+	{:else if activePage === 'Games'}
+		<Games/>
+	{:else if activePage === 'Scripts'}
+		<Scripts/>
 	{/if}
 </div>
