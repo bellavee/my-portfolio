@@ -5,7 +5,7 @@
 
 <div class="grid grid-cols-1 mb-4">
 	<div class="w-full">
-		<div class="bg-navy-800 rounded-3xl shadow-md mx-auto p-10">
+		<div class="bg-navy-800 rounded-3xl border border-navy-700 mx-auto p-10">
 			<p class="text-white font-extralight">
 				Some useful scripts make my life easier
 			</p>

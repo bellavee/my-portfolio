@@ -4,19 +4,21 @@
 	import Presentation from './pages/Presentation.svelte';
 	import Footer from './pages/Footer.svelte';
 	import About from './pages/About.svelte';
+	import Hobbies from './pages/Hobbies.svelte';
 </script>
 
 <style>
     /* Local styles */
 </style>
 
-<Navigation/>
+<!--<Navigation/>-->
 
 <div class="bg-navy-900 pt-16">
 
 	<Presentation/>
 	<About/>
 	<Project/>
+	<Hobbies/>
 	<Footer/>
 
 </div>

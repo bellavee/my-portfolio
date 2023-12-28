@@ -37,7 +37,7 @@ import rb_2 from '$lib/assets/project/games/rb_2.png'
 	<Card
 		title="Ricochet Robots"
 		tags={['Java', 'Java Swing']}
-		description="Puzzle board game with solving system using A* path finding algorithm"
+		description="Puzzle board game with a solving system using A* path finding algorithm"
 		images={[{ url: rb_1, alt: 'Screenshot of Ricochet Robots game' },
            { url: rb_2, alt: 'Another Screenshot of Ricochet Robots game' }]}
 		githubLink="https://github.com/bellavee/block-puzzle"
